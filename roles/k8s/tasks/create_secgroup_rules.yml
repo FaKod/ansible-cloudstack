@@ -53,6 +53,35 @@
      protocol: tcp
      user_security_group: "{{ k8s_security_group_name }}"
 
+# zookeeper
+
+  - name: Zookeeper Client
+    local_action:
+     module: cs_securitygroup_rule
+     security_group: "{{ k8s_security_group_name }}"
+     start_port: 2181
+     end_port: 2181
+     protocol: tcp
+     user_security_group: "{{ k8s_security_group_name }}"
+
+  - name: Zookeeper Follower
+    local_action:
+     module: cs_securitygroup_rule
+     security_group: "{{ k8s_security_group_name }}"
+     start_port: 2888
+     end_port: 2888
+     protocol: tcp
+     user_security_group: "{{ k8s_security_group_name }}"
+
+  - name: Zookeeper Leader
+    local_action:
+     module: cs_securitygroup_rule
+     security_group: "{{ k8s_security_group_name }}"
+     start_port: 3888
+     end_port: 3888
+     protocol: tcp
+     user_security_group: "{{ k8s_security_group_name }}"
+
 # external access
 
   - name: SSH for k8s
