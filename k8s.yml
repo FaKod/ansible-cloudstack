@@ -10,8 +10,12 @@
     k8s_username: foobar
     k8s_password: FdKPSuwQ
 # This template name is specific to http://exoscale.ch, replace it
+# worker node
     k8s_template: Linux CoreOS stable 1122 64-bit 50G Disk (2016-09-06-dcb493)
-    k8s_instance_type: Tiny
+    k8s_instance_type: Large
+# master node
+    k8s_template_master: Linux CoreOS stable 1122 64-bit 10G Disk (2016-09-06-dcb493)
+    k8s_instance_type_master: Tiny
 
   roles:
     - common
