@@ -3,20 +3,20 @@
   connection: local
   vars:
     ssh_key: k8s
-    k8s_version: 1.3.0
+    k8s_version: 1.3.7
     k8s_num_nodes: 2
-    k8s_security_group_name: k8s
-    k8s_node_prefix: barfoo
     k8s_context_name: precept
+    k8s_security_group_name: precept
+    k8s_node_prefix: precept-b
     k8s_username: foobar
-    k8s_password: FdKPSuwQ
+    k8s_password: innoq1234innoq
 # This template name is specific to http://exoscale.ch, replace it
 # worker node
     k8s_template: Linux CoreOS stable 1122 64-bit 50G Disk (2016-09-06-dcb493)
-    k8s_instance_type: Large
+    k8s_instance_type: Small
 # master node
     k8s_template_master: Linux CoreOS stable 1122 64-bit 10G Disk (2016-09-06-dcb493)
-    k8s_instance_type_master: Tiny
+    k8s_instance_type_master: Micro
 
   roles:
     - common
