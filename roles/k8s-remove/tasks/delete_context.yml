@@ -1,11 +1,11 @@
 # Create k8s context
 
   - name: Unset cluster 
-    command: kubectl config unset clusters.exo 
+    command: kubectl config unset clusters.{{ k8s_context_name }} 
     tags: context
 
   - name: Unset context
-    command: kubectl config unset contexts.exo
+    command: kubectl config unset contexts.{{ k8s_context_name }}
     tags: context
 
   - name: Unset current context
