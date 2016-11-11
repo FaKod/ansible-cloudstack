@@ -204,5 +204,5 @@ coreos:
         RestartSec=10
 
   update:
-    group: stable
-    reboot-strategy: off
+    group: beta
+    reboot-strategy: etcd-lock
