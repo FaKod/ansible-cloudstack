@@ -74,4 +74,4 @@
      module: cs_securitygroup_rule
      security_group: "{{ k8s_security_group_name }}"
      start_port: 32000
-     end_port: 32000
+     end_port: 32005
